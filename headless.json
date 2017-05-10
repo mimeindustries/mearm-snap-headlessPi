@@ -2,5 +2,6 @@
   "name": "MeArm Snap!",
   "path": "mearm-snap",
   "type": "static",
-  "category": "app"
+  "category": "app",
+  "description": "Control the MeArm Pi with Snap!"
 }
