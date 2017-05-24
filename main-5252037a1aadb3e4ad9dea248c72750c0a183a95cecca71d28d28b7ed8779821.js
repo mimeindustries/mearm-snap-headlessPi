@@ -733,7 +733,7 @@ var MeArmControlMenu = function(mearm, el){
   }
   
   this.updateAngle = function(servo, angle){
-    self.el.querySelector('.' + servo).innerHTML = angle + '&deg;';
+    self.el.querySelector('.' + servo).innerHTML = angle.toFixed(0) + '&deg;';
     if(!sliders[servo].dragging){
       sliders[servo].set(angle);
     }
