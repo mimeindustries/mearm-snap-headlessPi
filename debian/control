@@ -1,0 +1,7 @@
+Source: headlesspi-mearm-snap
+Maintainer: Ben Pirt <ben.pirt@mime.co.uk>
+
+Package: headlesspi-mearm-snap
+Architecture: armhf
+Description: A headlesspi app to control your MeArm Pi with Snap! in your browser
+Depends: headlesspi (>=0.1.2), mearm-js (>=0.0.7)

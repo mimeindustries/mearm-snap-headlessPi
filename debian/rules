@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+
+DISTRIBUTION = $(shell lsb_release -sr)
+VERSION = 0.0.5
+PACKAGEVERSION=${VERSION}
+APPNAME=headlesspi-mearm-snap
+INSTALLDIR = debian/${APPNAME}/usr/local/headlesspi/apps/${APPNAME}
+
+%:
+	dh $@
+
+override_dh_auto_clean:
+	rm -rf debian/${APPNAME}
+override_dh_auto_test:
+override_dh_usrlocal:
+override_dh_auto_build:
+override_dh_auto_install:
+	mkdir -p $(INSTALLDIR)
+	rsync -av . $(INSTALLDIR) --exclude debian --exclude .git --exclude .gitignore --exclude node_modules --exclude LICENSE --exclude README.md --exclude bin
+
+override_dh_gencontrol:
+	dh_gencontrol -- -v$(PACKAGEVERSION)

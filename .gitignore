@@ -1,0 +1,3 @@
+debian/headlesspi-mearm-snap*
+debian/files
+debian/debhelper-build-stamp
