@@ -3,5 +3,6 @@
   "path": "mearm-snap",
   "type": "static",
   "category": "app",
-  "description": "Control the MeArm Pi with Snap!"
+  "description": "Control the MeArm Pi with Snap!",
+  "version": "0.0.6"
 }

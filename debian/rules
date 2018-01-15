@@ -1,10 +1,10 @@
 #!/usr/bin/make -f
 
 DISTRIBUTION = $(shell lsb_release -sr)
-VERSION = 0.0.5
+#VERSION= <passed in by VERSION environment variable>
 PACKAGEVERSION=${VERSION}
 APPNAME=headlesspi-mearm-snap
-INSTALLDIR = debian/${APPNAME}/usr/local/headlesspi/apps/${APPNAME}
+INSTALLDIR = debian/${APPNAME}/opt/headlesspi/apps/${APPNAME}
 
 %:
 	dh $@
